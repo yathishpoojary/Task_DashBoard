@@ -1,0 +1,11 @@
+<h2 style="text-align: center;">Create Task</h2>
+
+<div class="div-horizontal" style="padding: 25px 25px; margin-left: 10px;">
+    <input class="input-title" style="height: 35px;" [(ngModel)]="taskItem.title" placeholder="TITLE*" name="taskItem-title" required/>
+    <input class="input-description" style="height: 35px; margin-left: 10px;" [(ngModel)]="taskItem.description" placeholder="DESCRIPTION *" name="taskItem-description" required/>
+    <select class="input-select-status" style="height: 35px; margin-left: 10px;" name="status" [(ngModel)]="taskItem.status" (change)="onStatusChange()" placeholder="STATUS">
+        <option *ngFor="let title of titles" [ngValue]="title.value">{{title.viewValue}}</option>
+    </select>
+    <button id="sumbit" style="height: 35px; margin-left: 10px;" mat-raised-button color="primary" (click)="addNewTaskItem()">ADD</button>
+    <button class="button-control"  style="height: 35px; margin-left: 10px;" (click)="resetTaskItem()"  mat-raised-button color="accent"><b>CANCEL</b></button>
+</div>

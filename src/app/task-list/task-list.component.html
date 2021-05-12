@@ -1,0 +1,61 @@
+<h2 style="text-align: center;">Dashboard</h2>
+
+<div class="vertical-center" style="text-align: end;  ">
+    <button (click)="openCreateTask()"  style="height: 40px;background-color: blue;color: white;" color="primary">Add New Task</button>
+</div>
+
+
+<div class="list-container">
+ 
+    <div class="todo-container column-container">
+        <div class="list"
+            cdkDropList
+            #todoList="cdkDropList"
+            [cdkDropListData]="openTaskList"
+            (cdkDropListDropped)="drop($event)"
+            [cdkDropListConnectedTo]="[progressList, doneList]">
+            <h2 class="listHeader">Tech to learn</h2>
+            <mat-card *ngFor="let item of openTaskList" cdkDrag [cdkDragData] = "item" class="card">
+            <mat-card-header>
+                <mat-card-title>{{item.title}}</mat-card-title>
+                <mat-card-subtitle>{{item.description}}</mat-card-subtitle>
+            </mat-card-header>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="todo-container column-container">
+        <div class="list"
+            cdkDropList
+            #progressList="cdkDropList"
+            [cdkDropListData]="progressTaskList"
+            (cdkDropListDropped)="drop($event)"
+            [cdkDropListConnectedTo]="[todoList, doneList]">
+            <h2 class="listHeader">On Progress</h2>
+            <mat-card *ngFor="let item of progressTaskList" cdkDrag [cdkDragData] = "item" class="card">
+                <mat-card-header>
+                    <mat-card-title>{{item.title}}</mat-card-title>
+                    <mat-card-subtitle>{{item.description}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="done-container column-container" >
+        <div class="list"
+        cdkDropList
+        #doneList="cdkDropList"
+        [cdkDropListData]="completedTaskList"
+        (cdkDropListDropped)="drop($event)"
+        [cdkDropListConnectedTo]="[progressList, todoList]">
+            <h2 class="listHeader">Done</h2>
+            <mat-card *ngFor="let item of completedTaskList" cdkDrag [cdkDragData] = "item" class="card">
+                <mat-card-header>
+                    <mat-card-title>{{item.title}}</mat-card-title>
+                    <mat-card-subtitle>{{item.description}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </div>
+    </div>
+
+</div>
