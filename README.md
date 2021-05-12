@@ -1,7 +1,7 @@
-# Patient Queue
+# Task Dashboard
 
 
-This is a Patient queue web application. 
+This is a Task Dashboard application. Here we can add and update the task.
 
 ## Technologies
 HTML, SCSS, Typescript, Javascript, node.js, better-sqlite3, Angular
