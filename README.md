@@ -40,3 +40,18 @@ HTML, SCSS, Typescript, Javascript, node.js, better-sqlite3, Angular
 * Run npm start
 
 ```
+
+
+
+## Screenshot
+```
+
+![Dashboard](https://user-images.githubusercontent.com/72939246/118086595-d9eaf680-b3e1-11eb-8620-4285f0d9e538.png)
+
+![Create Task](https://user-images.githubusercontent.com/72939246/118085615-5381e500-b3e0-11eb-9ca2-171c412d3eb0.png)
+
+
+
+
+
+```
