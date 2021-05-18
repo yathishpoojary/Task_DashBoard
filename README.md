@@ -1,7 +1,7 @@
 # Task Dashboard
 
 
-This is a Task Dashboard application. Here we can add and update the task.
+This is a Task Dashboard application. Here we can add, update and edit the task.
 
 ## Technologies
 HTML, SCSS, Typescript, Javascript, node.js, better-sqlite3, Angular
