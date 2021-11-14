@@ -27,7 +27,7 @@ export class TaskService {
     }
 
     deleteTask() { //
-        console.log(" task deleted");
+        console.log("test task deleted ");
 
     }
 
