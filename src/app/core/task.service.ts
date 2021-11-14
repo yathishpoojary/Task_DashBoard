@@ -26,6 +26,11 @@ export class TaskService {
         return this.http.post(this.baseURL + 'api/tasks/updateTask' , updateObj);
     }
 
+    deleteTask() { //
+        console.log(" task deleted");
+
+    }
+
     // getAllBill() {
     //     return this.http.get(`api/bills/getBills`);
     // }
