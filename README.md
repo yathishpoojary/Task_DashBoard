@@ -2,6 +2,7 @@
 
 
 This is a Task Dashboard application. Here we can add, update and edit the task.
+(Checkout)
 
 ## Technologies
 HTML, SCSS, Typescript, Javascript, node.js, better-sqlite3, Angular
