@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const testItemDb = require("./../database/testItem")
 
-router.post("/addTask",  function(req, resp, next) { // add task 
+router.post("/addTask",  function(req, resp, next) { // add task route
     let testItem = req.body;
     if(!testItem) {
         resp.status(400).send({error: "invalid Data"});
@@ -16,7 +16,7 @@ router.post("/addTask",  function(req, resp, next) { // add task
         });
 });
 
-router.post("/updateTask",  function(req, resp, next) { // update task
+router.post("/updateTask",  function(req, resp, next) { // update task 
     let testItem = req.body;
     if(!testItem) {
         resp.status(400).send({error: "invalid Data"});
